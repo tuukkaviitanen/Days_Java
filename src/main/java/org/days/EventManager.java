@@ -25,9 +25,34 @@ public class EventManager {
         events.add(new Event(LocalDate.now(), null, "todays"));
     }
 
-    public List<Event> getEvents(CommandList options) {
-        List<Event> allEvents = events;
+    public List<Event> getEvents(EventFilterOptions options) {
+        List<Event> allEvents = new ArrayList<>(events);
         return queryEvents(allEvents, options);
+    }
+
+    public List<Event> deleteEvents(EventDeleteOptions options) {
+        List<Event> allEvents = new ArrayList<>(events);
+
+        var toBeDeletedEvents = (options.isDeleteAllEvents())
+                ? new ArrayList<>(allEvents)
+                : queryEvents(allEvents, options);
+
+        if (!options.isDryRun()) {
+            events.removeAll(toBeDeletedEvents);
+        }
+
+        return toBeDeletedEvents;
+    }
+
+    public Event addEvents(CommandAdd options) {
+        List<Event> allEvents = new ArrayList<>(events);
+
+        var newEvent = new Event(options.date, options.category, options.description );
+        allEvents.add(newEvent);
+
+        events = allEvents;
+
+        return newEvent;
     }
 
     private List<Event> queryEvents(List<Event> allEvents, EventFilterOptions options) {

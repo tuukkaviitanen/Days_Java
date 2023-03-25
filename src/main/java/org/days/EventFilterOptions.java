@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface EventFilterOptions {
-    /** Filters Events by single category*/
+/** Filters Events by single category*/
     String getCategory();
 
 

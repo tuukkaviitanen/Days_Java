@@ -40,12 +40,10 @@ public class CommandList implements EventFilterOptions {
         return category;
     }
 
-
     @Override
     public List<String> getCategories() {
         return categories;
     }
-
 
     @Override
     public String getDescription() {

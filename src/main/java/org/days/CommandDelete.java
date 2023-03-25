@@ -13,17 +13,20 @@ public class CommandDelete implements EventDeleteOptions {
     @Parameter(names = "--category")
     public String category;
 
+    @Parameter(names = "--categories")
+    public List<String> categories;
+
     @Parameter(names = "--description")
     public String description;
 
     @Parameter(names = "--date")
-    public String date;
+    public LocalDate date;
 
     @Parameter(names = "--before-date")
-    public String before_date;
+    public LocalDate before_date;
 
     @Parameter(names = "--after-date")
-    public String after_date;
+    public LocalDate after_date;
 
     @Parameter(names = "--today")
     public Boolean is_today = false;
@@ -42,58 +45,58 @@ public class CommandDelete implements EventDeleteOptions {
 
 
     @Override
-    public boolean getDryRun() {
-        return false;
+    public boolean isDryRun() {
+        return is_dry_run;
     }
 
     @Override
-    public boolean getDeleteAllEvents() {
-        return false;
+    public boolean isDeleteAllEvents() {
+        return is_delete_all;
     }
 
     @Override
     public String getCategory() {
-        return null;
+        return category;
     }
 
     @Override
     public List<String> getCategories() {
-        return null;
+        return categories;
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return description;
     }
 
     @Override
     public LocalDate getDate() {
-        return null;
+        return date;
     }
 
     @Override
     public boolean isToday() {
-        return false;
+        return is_today;
     }
 
     @Override
     public LocalDate getAfterDate() {
-        return null;
+        return after_date;
     }
 
     @Override
     public LocalDate getBeforeDate() {
-        return null;
+        return before_date;
     }
 
     @Override
     public boolean isNoCategory() {
-        return false;
+        return no_category;
     }
 
     @Override
     public boolean isExcluded() {
-        return false;
+        return is_excluded;
     }
 
 

@@ -1,7 +1,6 @@
 package org.days;
 
 import com.beust.jcommander.JCommander;
-import jdk.jshell.spi.ExecutionControl;
 
 
 
@@ -31,9 +30,13 @@ public class Main {
                     }
                     break;
                 case "add":
-                    throw new ExecutionControl.NotImplementedException("Not Implemented");
+                    System.out.println(eventManager.addEvents(add));
+                    break;
                 case "delete":
-                    throw new ExecutionControl.NotImplementedException("Not Implemented");
+                    for (Event event : eventManager.deleteEvents(delete)) {
+                        System.out.println(event);
+                    }
+                    break;
                 default:
                     jc.usage();
             }
