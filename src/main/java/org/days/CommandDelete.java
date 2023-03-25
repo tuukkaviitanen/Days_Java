@@ -6,25 +6,24 @@ import com.beust.jcommander.Parameters;
 import java.time.LocalDate;
 import java.util.List;
 
-@Parameters(commandNames = "list", commandDescription = "List events to console")
-public class CommandList implements EventFilterOptions {
+@Parameters(commandNames = "delete", commandDescription = "Delete event(s). Displays all deleted/would-be-deleted events")
+public class CommandDelete implements EventDeleteOptions {
+
 
     @Parameter(names = "--category")
     public String category;
-    @Parameter(names = "--categories")
-    public List<String> categories;
 
     @Parameter(names = "--description")
     public String description;
 
-    @Parameter(names = "--date", converter = LocalDateConverter.class)
-    public LocalDate date;
+    @Parameter(names = "--date")
+    public String date;
 
-    @Parameter(names = "--before-date", converter = LocalDateConverter.class)
-    public LocalDate before_date;
+    @Parameter(names = "--before-date")
+    public String before_date;
 
-    @Parameter(names = "--after-date", converter = LocalDateConverter.class)
-    public LocalDate after_date;
+    @Parameter(names = "--after-date")
+    public String after_date;
 
     @Parameter(names = "--today")
     public Boolean is_today = false;
@@ -35,51 +34,68 @@ public class CommandList implements EventFilterOptions {
     @Parameter(names = "--exclude")
     public Boolean is_excluded = false;
 
+    @Parameter(names = "--dry-run")
+    public Boolean is_dry_run = false;
+
+    @Parameter(names = "--all")
+    public Boolean is_delete_all = false;
+
+
     @Override
-    public String getCategory() {
-        return category;
+    public boolean getDryRun() {
+        return false;
     }
 
+    @Override
+    public boolean getDeleteAllEvents() {
+        return false;
+    }
+
+    @Override
+    public String getCategory() {
+        return null;
+    }
 
     @Override
     public List<String> getCategories() {
-        return categories;
+        return null;
     }
-
 
     @Override
     public String getDescription() {
-        return description;
+        return null;
     }
 
     @Override
     public LocalDate getDate() {
-        return this.date;
+        return null;
     }
 
     @Override
     public boolean isToday() {
-        return is_today;
+        return false;
     }
 
     @Override
     public LocalDate getAfterDate() {
-        return after_date;
+        return null;
     }
 
     @Override
     public LocalDate getBeforeDate() {
-        return before_date;
+        return null;
     }
 
     @Override
     public boolean isNoCategory() {
-        return no_category;
+        return false;
     }
 
     @Override
     public boolean isExcluded() {
-        return is_excluded;
+        return false;
     }
+
+
 
 }

@@ -20,6 +20,38 @@
             <artifactId>jcommander</artifactId>
             <version>1.82</version>
         </dependency>
-    </dependencies>
 
+    </dependencies>
+    <build>
+        <finalName>days</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>
+                                        org.days.Main
+                                    </mainClass>
+                                </manifest>
+                            </archive>
+                            <!-- THIS IS IMPORTANT! ELSE ADDS jar-with-dependencies TO FILENAME -->
+                            <appendAssemblyId>false</appendAssemblyId>
+
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
