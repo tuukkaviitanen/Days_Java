@@ -1,9 +1,10 @@
 package org.days;
 
+import com.opencsv.bean.CsvToBeanBuilder;
+import java.io.*;
+import java.nio.file.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class EventManager {
@@ -20,13 +21,10 @@ public class EventManager {
     public List<Event> events;
 
     private EventManager() {
-        events = new ArrayList<>();
-        events.add(new Event(LocalDate.now(), "basic day", "today"));
-        events.add(new Event(LocalDate.now(), null, "todays"));
     }
 
-    public List<Event> getEvents(EventFilterOptions options) {
-        List<Event> allEvents = new ArrayList<>(events);
+    public List<Event> getEvents(EventFilterOptions options) throws FileNotFoundException {
+        List<Event> allEvents = ReadEventsFromCSV();
         return queryEvents(allEvents, options);
     }
 
@@ -116,5 +114,34 @@ public class EventManager {
         return filteredEvents;
     }
 
+    private static Path getCsvFilePath(){
+        String userHomeDirectory = System.getProperty("user.home");
+        if (userHomeDirectory.isBlank()) {
+            throw new InvalidPathException(userHomeDirectory, "Unable to determine user home directory");
+        }
+
+        Path daysPath = Paths.get(userHomeDirectory, ".days");
+        if (Files.notExists(daysPath)) {
+            throw new InvalidPathException(daysPath.toString(), "Directory does not exist, please create it");
+        }
+        Path eventsPath = daysPath.resolve("events.csv");
+        if (Files.notExists(eventsPath)) {
+            throw new InvalidPathException(eventsPath.toString(), "events.csv file not found");
+        }
+        return eventsPath;
+    }
+
+    private static List<Event> ReadEventsFromCSV() throws FileNotFoundException {
+        Path eventsFile = getCsvFilePath();
+        var filePath = eventsFile.toString();
+        List<Event> events = new CsvToBeanBuilder(new FileReader(filePath))
+                .withType(Event.class)
+                .build()
+                .parse();
+
+        events.sort(Comparator.comparing(o -> o.date));
+
+        return events;
+    }
 
 }

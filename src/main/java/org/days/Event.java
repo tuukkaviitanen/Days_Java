@@ -1,15 +1,26 @@
 package org.days;
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvDate;
+
 import java.time.LocalDate;
 
 public class Event {
+    public Event()
+    {
+
+    }
     public Event(LocalDate date, String category, String description){
         this.date = date;
         this.category = category;
         this.description = description;
     }
+    @CsvBindByName
+    @CsvDate("yyyy-MM-dd")
     public LocalDate date;
+    @CsvBindByName
     public String category;
+    @CsvBindByName
     public String description;
 
 
