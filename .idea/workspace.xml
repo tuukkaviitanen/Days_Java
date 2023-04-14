@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Added messages if no events were found" />
+    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="python test script added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,8 +175,33 @@
       <option name="project" value="LOCAL" />
       <updated>1681498432209</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="workspace.xml generated update. not sure if needed">
+      <created>1681498906423</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681498906423</updated>
+    </task>
+    <task id="LOCAL-00008" summary="python test script added">
+      <created>1681498934866</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681498934866</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created basic structure for maven project. &#10;Added EventFilterOptions interface, Event class, &#10;EventManager and CommandList class.&#10;Added JCommander dependency for parsing commandline arguments" />
@@ -182,6 +210,8 @@
     <MESSAGE value="Added opencsv reading feature" />
     <MESSAGE value="Fixed headers from write. Fixed delete all without --all" />
     <MESSAGE value="Added messages if no events were found" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added messages if no events were found" />
+    <MESSAGE value="workspace.xml generated update. not sure if needed" />
+    <MESSAGE value="python test script added" />
+    <option name="LAST_COMMIT_MESSAGE" value="python test script added" />
   </component>
 </project>
