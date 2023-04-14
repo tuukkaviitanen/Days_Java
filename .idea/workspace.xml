@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Fixed headers from write. Fixed delete all without --all">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/days/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/days/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Added messages if no events were found" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681497926393</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added messages if no events were found">
+      <created>1681498432209</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681498432209</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -177,6 +181,7 @@
     <MESSAGE value="Got parsing and filtering to work.&#10;Still need CSV interface." />
     <MESSAGE value="Added opencsv reading feature" />
     <MESSAGE value="Fixed headers from write. Fixed delete all without --all" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed headers from write. Fixed delete all without --all" />
+    <MESSAGE value="Added messages if no events were found" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added messages if no events were found" />
   </component>
 </project>
