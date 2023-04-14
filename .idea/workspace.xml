@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="python test script added">
+    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="updated version in pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_script.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681498934866</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated version in pom.xml">
+      <created>1681499971186</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681499971186</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +219,7 @@
     <MESSAGE value="Added messages if no events were found" />
     <MESSAGE value="workspace.xml generated update. not sure if needed" />
     <MESSAGE value="python test script added" />
-    <option name="LAST_COMMIT_MESSAGE" value="python test script added" />
+    <MESSAGE value="updated version in pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated version in pom.xml" />
   </component>
 </project>
