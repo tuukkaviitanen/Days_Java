@@ -6,21 +6,19 @@ import com.opencsv.bean.CsvDate;
 import java.time.LocalDate;
 
 public class Event {
-    public Event()
-    {
-
-    }
+    public Event() // this is necessary
+    {}
     public Event(LocalDate date, String category, String description){
         this.date = date;
         this.category = category;
         this.description = description;
     }
-    @CsvBindByName
+    @CsvBindByName(column = "date")
     @CsvDate("yyyy-MM-dd")
     public LocalDate date;
-    @CsvBindByName
+    @CsvBindByName(column = "category")
     public String category;
-    @CsvBindByName
+    @CsvBindByName(column = "description")
     public String description;
 
 
@@ -28,8 +26,8 @@ public class Event {
     public String toString() {
         StringBuilder message = new StringBuilder();
         message.append(date).append(": ").append(description);
-        if(category != null){
-            message.append("(").append(category).append(")");
+        if(category != null && !category.isEmpty()){
+            message.append(" (").append(category).append(")");
         }
         return message.toString();
     }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Added opencsv reading feature">
+    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Fixed headers from write. Fixed delete all without --all">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/days/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/days/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/days/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/days/EventManager.java" afterDir="false" />
     </list>
@@ -80,7 +79,7 @@
     </configuration>
     <configuration name="days.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/days.jar" />
-      <option name="PROGRAM_PARAMETERS" value="list" />
+      <option name="PROGRAM_PARAMETERS" value="delete --all" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
@@ -156,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679771039913</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added opencsv reading feature">
+      <created>1680678508311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680678508311</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +170,7 @@
     <MESSAGE value="Added rest of the commands. &#10;Now creates runnable jar file called days.jar with all dependencies." />
     <MESSAGE value="Got parsing and filtering to work.&#10;Still need CSV interface." />
     <MESSAGE value="Added opencsv reading feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added opencsv reading feature" />
+    <MESSAGE value="Fixed headers from write. Fixed delete all without --all" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed headers from write. Fixed delete all without --all" />
   </component>
 </project>
