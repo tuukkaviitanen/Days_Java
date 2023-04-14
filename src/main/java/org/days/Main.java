@@ -25,17 +25,33 @@ public class Main {
 
             switch (jc.getParsedCommand()) {
                 case "list":
-                    for (Event event : eventManager.getEvents(list)) {
-                        System.out.println(event);
+                    var events = eventManager.getEvents(list);
+                    if(events.size() > 0){
+                        for (Event event : events) {
+                            System.out.println(event);
+                        }
+                    }else{
+                        System.out.println("No matching events found");
                     }
                     break;
                 case "add":
-                    System.out.println(eventManager.addEvents(add));
+                    var addedEvent = eventManager.addEvents(add);
+                    if(addedEvent != null){
+                        System.out.println(eventManager.addEvents(add));
+                    }else{
+                        System.out.println("Error with event creation");
+                    }
                     break;
                 case "delete":
-                    for (Event event : eventManager.deleteEvents(delete)) {
-                        System.out.println(event);
+                    var deletedEvents = eventManager.deleteEvents(delete);
+                    if(deletedEvents.size() > 0){
+                        for (Event event : deletedEvents) {
+                            System.out.println(event);
+                        }
+                    }else{
+                        System.out.println("No matching events found");
                     }
+
                     break;
                 default:
                     jc.usage();
