@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Added README.md, maven-wrapper, Events.csv and updated python test script" />
+    <list default="true" id="ccf4cf6f-b861-4681-a349-72d2bc793fff" name="Changes" comment="Created new wrapper that works with linux">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681502586974</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created new wrapper that works with linux">
+      <created>1681504147853</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681504147853</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created new wrapper that works with linux">
+      <created>1681504167493</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681504167493</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +241,7 @@
     <MESSAGE value="python test script added" />
     <MESSAGE value="updated version in pom.xml" />
     <MESSAGE value="Added README.md, maven-wrapper, Events.csv and updated python test script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README.md, maven-wrapper, Events.csv and updated python test script" />
+    <MESSAGE value="Created new wrapper that works with linux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new wrapper that works with linux" />
   </component>
 </project>

@@ -6,10 +6,11 @@ Project uses Java with Maven.
 
 ## HOW TO USE
 
-1. Create a directory called `.days` in your HOME DIRECTORY (ON WINDOWS C:/Users/{username}) (ON LINUX: /home/{username}) (usually)
-2. Create `Events.csv` file inside `.days` and add "date", "category" and "description" headers(or don't if you want to add the events in-app). You can use the template `Events.csv` included in this repository for reference.
-3. In Days_Java directory, run `./mvnw package` (or in WINDOWS CMD `mvnw.cmd`) to build `days.jar`. This is possible without having maven installed on your machine. You can also use `mvn package` if you have maven installed.
-4. Program is now runnable in `target` directory by running `java -jar days.jar [params]` (Java SDK needs to be installed in your machine)
+1. Make sure Java SDK (JDK) is installed on your machine
+2. Create a directory called `.days` in your HOME DIRECTORY (ON WINDOWS C:/Users/{username}) (ON LINUX: /home/{username}) (usually)
+3. Create `Events.csv` file inside `.days` and add "date", "category" and "description" headers(or don't if you want to add the events in-app). You can use the template `Events.csv` included in this repository for reference.
+4. In Days_Java directory, run `./mvnw package` (or in WINDOWS CMD `mvnw.cmd`) to build `days.jar`. This is possible without having maven installed on your machine. You can also use `mvn package` if you have maven installed.
+5. Program is now runnable in `target` directory by running `java -jar days.jar [params]`
 
 ## PARAMS
 
